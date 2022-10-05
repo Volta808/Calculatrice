@@ -5,6 +5,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import com.faendir.rhino_android.RhinoAndroidHelper
+import org.mozilla.javascript.Context
+import java.lang.Exception
+import org.mozilla.javascript.Scriptable
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,41 +19,36 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-    var nb1 : Double? = null
+    var calcul = ""
 
-    fun chiffre(view: View) {
-        var edit = findViewById(R.id.letexte) as EditText
-        var letext = edit.text.toString() + (view as Button).text
-        // Do something in response to button click
-        edit.setText(letext)
-    }
-    var operation = ""
-    var result = 0.0
     fun operation(view : View){
-
         var edit = findViewById(R.id.letexte) as EditText
-        if(nb1==null){
-            nb1 = edit.text.toString().toDouble()
-            operation = (view as Button).text.toString()
-            edit.setText("")
-
+        var bouton = (view as Button)
+        if(bouton.text!="=") {
+            calcul = calcul + bouton.text
+            edit.setText(calcul)
         }else{
-            if(operation=="+"){result = nb1!! + edit.text.toString().toDouble()}
-            else if(operation=="-"){result = nb1!! - edit.text.toString().toDouble()}
-            else if(operation=="*"){result = nb1!! * edit.text.toString().toDouble()}
-            else if(operation=="/"){result = nb1!! / edit.text.toString().toDouble()}
-            edit.setText(result.toString())
+            try {
+                edit.setText(calculer(calcul))
+            } catch (e: Exception) {
+                edit.setText("Erreur")
+            }
 
         }
+        }
 
-    }
     fun reset(view : View){
-        var edit = findViewById(R.id.letexte) as EditText
-        operation = ""
-        nb1 = null
-        result = 0.0
-        edit.setText("")
-
+        calcul = ""
+        (findViewById(R.id.letexte) as EditText).setText("")
     }
 
+
+
+}
+
+fun calculer(calcul:String):String{
+    var context = RhinoAndroidHelper().enterContext()
+    Context.checkOptimizationLevel(-1)
+    var scriptable : Scriptable = context.initStandardObjects()
+    return context.evaluateString(scriptable, calcul, "JavaScript", 1, null).toString()
 }

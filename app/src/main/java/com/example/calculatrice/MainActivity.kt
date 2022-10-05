@@ -50,7 +50,11 @@ class MainActivity : AppCompatActivity() {
         calcul = ""
         (findViewById(R.id.letexte) as EditText).setText("")
     }
-
+    fun effacer(view : View){
+        var edit = findViewById(R.id.letexte) as EditText
+        calcul = calcul.dropLast(1)
+        edit.setText(calcul)
+    }
 
 
 }
@@ -61,3 +65,4 @@ fun calculer(calcul:String):String{
     var scriptable : Scriptable = context.initStandardObjects()
     return context.evaluateString(scriptable, calcul, "JavaScript", 1, null).toString()
 }
+

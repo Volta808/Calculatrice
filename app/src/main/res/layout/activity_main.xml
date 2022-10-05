@@ -7,21 +7,47 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="263dp"
-        android:layout_height="122dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:rotationX="4"
-        android:rotationY="12"
-        android:text="@string/titre"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200px"
+        android:orientation="horizontal"><![CDATA[
+
+        />
+
+
+
+
+
+        ]]>
+
+        <TextView
+            android:layout_width="263dp"
+            android:layout_height="122dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:rotationX="4"
+            android:rotationY="12"
+            android:text="@string/titre"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.385"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.04" />
+
+        <Button
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="C"
+            app:cornerRadius="100px"
+            android:onClick="reset"
+            />
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/letexte"
@@ -46,43 +72,36 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button40"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="7"
-                android:onClick="chiffre" />
-                />
+                android:onClick="chiffre"
+                android:text="7" />
+            />
 
             <Button
-                android:id="@+id/button41"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20px"
                 android:layout_marginRight="20px"
                 android:layout_weight="1"
-                android:text="8"
                 android:onClick="chiffre"
-                />
+                android:text="8" />
 
             <Button
-                android:id="@+id/button37"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="20px"
                 android:layout_weight="1"
-                android:text="9"
                 android:onClick="chiffre"
-                />
+                android:text="9" />
 
             <Button
-                android:id="@+id/addition"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="+"
                 android:onClick="operation"
-                />
+                android:text="+" />
 
         </LinearLayout>
 
@@ -96,19 +115,16 @@
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="4"
                 android:onClick="chiffre"
-                />
+                android:text="4" />
 
             <Button
-                android:id="@+id/button45"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20px"
                 android:layout_weight="1"
-                android:text="5"
                 android:onClick="chiffre"
-                />
+                android:text="5" />
 
             <Button
                 android:layout_width="111dp"
@@ -116,18 +132,15 @@
                 android:layout_marginLeft="20px"
                 android:layout_marginRight="20px"
                 android:layout_weight="1"
-                android:text="6"
                 android:onClick="chiffre"
-                />
+                android:text="6" />
 
             <Button
-                android:id="@+id/soustraction"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="-"
                 android:onClick="operation"
-                />
+                android:text="-" />
 
         </LinearLayout>
 
@@ -141,19 +154,16 @@
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="1"
                 android:onClick="chiffre"
-                />
+                android:text="1" />
 
             <Button
-                android:id="@+id/button46"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20px"
                 android:layout_weight="1"
-                android:text="2"
                 android:onClick="chiffre"
-                />
+                android:text="2" />
 
             <Button
                 android:layout_width="111dp"
@@ -161,18 +171,15 @@
                 android:layout_marginLeft="20px"
                 android:layout_marginRight="20px"
                 android:layout_weight="1"
-                android:text="3"
                 android:onClick="chiffre"
-                />
+                android:text="3" />
 
             <Button
-                android:id="@+id/division"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="/"
                 android:onClick="operation"
-                />
+                android:text="/" />
 
         </LinearLayout>
 
@@ -199,7 +206,6 @@
                 android:text="." />
 
             <Button
-                android:id="@+id/egal2"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="20px"
@@ -208,7 +214,6 @@
                 android:text="=" />
 
             <Button
-                android:id="@+id/multiplication"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

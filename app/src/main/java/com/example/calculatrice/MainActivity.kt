@@ -42,5 +42,13 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+    fun reset(view : View){
+        var edit = findViewById(R.id.letexte) as EditText
+        operation = ""
+        nb1 = null
+        result = 0.0
+        edit.setText("")
+
+    }
 
 }

@@ -54,21 +54,44 @@
         android:layout_width="326dp"
         android:layout_height="56dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="90px"
+        android:layout_marginTop="30px"
         android:focusable="false"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100px"
+        android:layout_marginTop="80px"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="387dp"
+            android:layout_height="74dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30px"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="111dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
+                android:onClick="operation"
+                android:text="(" />
+
+            <Button
+                android:layout_width="111dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="operation"
+                android:text=")" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="387dp"
             android:layout_height="74dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="200px"
             android:orientation="horizontal">
 
             <Button

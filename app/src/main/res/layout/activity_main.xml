@@ -183,7 +183,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:layout_width="140dp"
+                android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="20px"
                 android:layout_weight="1"
@@ -191,23 +191,29 @@
                 android:text="0" />
 
             <Button
-                android:id="@+id/egal"
-                android:layout_width="40dp"
+                android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="20px"
                 android:layout_weight="1"
-                android:text="="
+                android:onClick="chiffre"
+                android:text="." />
+
+            <Button
+                android:id="@+id/egal2"
+                android:layout_width="111dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20px"
+                android:layout_weight="1"
                 android:onClick="operation"
-                />
+                android:text="=" />
 
             <Button
                 android:id="@+id/multiplication"
-                android:layout_width="40dp"
+                android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="*"
                 android:onClick="operation"
-                />
+                android:text="*" />
 
         </LinearLayout>
     </LinearLayout>
